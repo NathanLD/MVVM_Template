@@ -1,0 +1,20 @@
+﻿MODEL : Objets à manipuler. Est complètement indépendant de la View et du ViewModel
+- EntityFramework => Pour les objets générés à partir d'une BDD, cf. "Help_EF.txt"
+- POCO => Pour les objets simples, conteneurs de données
+
+VIEW : Vues, interfaces graphiques. Sont développées en XAML. Par convention, le nom se termine toujours par View.
+
+VIEWMODEL : Classe contenant la logique d'une View. Récupère les données du modèle et les affiche sur la vue. Met à jour le modèle en fonction des actions du user. Par convention, si une vue se nomme xxxView, la ViewModel associée se nomme xxxViewModel.
+
+RESOURCE : Pour les ressources extérieures au code
+- img => Pour placer les ressources graphiques
+
+UTILS : Autres fichiers
+- Common => Classes pouvant être réutilisées dans différentes applications. Fournissent des fonctionnalités utiles.
+- Converter => Un "Converter" convertit un type de données côté ViewModel, en un autre type de données côté View.
+- MVVM => Classes utilitaires nécessaires au bon fonctionnement de l'application en mode MVVM. Tous les ViewModel devront hériter de ViewModelBase, et toutes les commandes devront utiliser le RelayCommand.
+- Repository => Contient des classes gérant les requêtes SQL avec EntityFramework. Il est possible d'avoir un Repository par Base de Données afin de regrouper les requêtes ayant un rôle similaire.
+
+App.config : Contient les ConnectionStrings que va générer EntityFramework
+
+App.xaml : Permet de stocker des ressources diverses, notamment : liens entre View et ViewModel / converters / styles et templates XAML / ...

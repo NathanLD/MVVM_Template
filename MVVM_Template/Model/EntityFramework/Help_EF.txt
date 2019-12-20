@@ -1,0 +1,7 @@
+﻿Placez ici les Modèles générés par Entity Framework.
+
+- Add new item... > Data > ADO.NET Entity Data Model
+- Bien penser à donner un nom au modèle avant de continuer !
+- EF Designer from Database > Next
+- Choisir la ConnectionString > Next
+- Choisir les tables à importer > Finish
